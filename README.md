@@ -1,1 +1,2 @@
-# controle-estacao-front
+Front-end do aplicativo de controle centralizado de acesso à estações.
+
