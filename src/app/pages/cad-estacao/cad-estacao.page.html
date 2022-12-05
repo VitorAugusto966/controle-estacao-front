@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Cadastro de Estação</ion-title>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Cidade</ion-label>
+    <ion-input type="text" [(ngModel)]="cidade"></ion-input>
+  </ion-item> 
+  <br>
+  <ion-button color="success" (click)="create()">Cadastrar</ion-button>
+</ion-content>

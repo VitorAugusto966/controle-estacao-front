@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Lista de acessos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid *ngIf="listAcessos.length > 0">
+    <ion-row>
+      <ion-col style="color:lightskyblue" >Nome</ion-col>
+      <ion-col style="color:lightskyblue" >Estação</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let acesso of listAcessos;"> 
+      
+      <ion-col> <ion-label>{{acesso.nome}}</ion-label></ion-col> 
+      <ion-col> <ion-label>{{acesso.cidade}}</ion-label></ion-col> 
+      </ion-row>
+    </ion-grid>
+
+</ion-content>
+ 

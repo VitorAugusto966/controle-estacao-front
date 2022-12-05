@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Acessos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-item>
+
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-select [compareWith]="compareWith" placeholder="Selecione um usuário" (ionChange)="usuarioEscolhido($event)"
+        okText="Salvar" cancelText="Cancelar">
+        <ion-select-option *ngFor="let user of users" [value]="user">{{ user.email }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Estações GNSS</ion-label>
+      <ion-select [compareWith]="compareWith" placeholder="Selecione a(as) estações" (ionChange)="handleChange($event)"
+        [multiple]="true" okText="Salvar" cancelText="Cancelar">
+
+
+        <ion-select-option  *ngFor="let estacao of this.estacoesA" [value]="estacao">{{ estacao.cidade }}</ion-select-option>
+      </ion-select>
+
+    </ion-item>
+  </ion-list>
+  <ion-button color="success" (click)="create()">Cadastrar</ion-button>
+</ion-content>

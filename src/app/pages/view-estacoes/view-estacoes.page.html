@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Estações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid *ngIf="estacoes.length > 0">
+    <ion-row>
+      <ion-col style="color:lightskyblue">ID</ion-col>
+      <ion-col style="color:lightskyblue" >Cidade</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let estacao of estacoes; let pos = index"> 
+      <ion-col> {{estacao.id}}</ion-col> 
+      <ion-col> {{estacao.cidade}}</ion-col> 
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

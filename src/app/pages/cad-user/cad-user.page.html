@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Cadastro de usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="text" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="senha"></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Tipo</ion-label>
+          <ion-select
+            okText="Salvar" cancelText="Cancelar"
+            placeholder="Selecione uma opção"
+            (ionChange)="handleChange($event)">
+          <ion-select-option value="admin">Administrador</ion-select-option>
+          <ion-select-option value="comum">Usuario Comum</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+      <ion-button style="margin-left: 15px;" color="success" (click)="create()">Cadastrar</ion-button>
+</ion-content>

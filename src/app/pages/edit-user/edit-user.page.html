@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Alterar usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input type="text" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Senha</ion-label>
+    <ion-input type="password" [(ngModel)]="senha"></ion-input>
+  </ion-item>
+    <ion-button style="margin-left: 15px;" color="success" (click)="update()">Alterar</ion-button>
+    <ion-button style="margin-left: 15px;" color="danger" (click)="delete()">Excluir</ion-button>
+    
+</ion-content>
